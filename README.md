@@ -1,4 +1,4 @@
-# harp-browserify-babel
+# harp-browserify-babel-browsersync
 
 > A harp boilerplate with browserify and es6 (through babelify) support.
 
@@ -12,7 +12,7 @@ npm i -g harp
 ... and use this repo as a boilerplate:
 
 ```
-harp init -b janruehling/harp-browserify-babel
+harp init -b janruehling/harp-browserify-babel-browsersync
 ```
 
 ... or clone the repository.

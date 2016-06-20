@@ -1,13 +1,14 @@
 {
-  "name": "harp-browserify-babel",
+  "name": "harp-browserify-babel-browsersync",
   "version": "0.0.1",
   "description": "A harp boilerplate with browserify and babel",
   "main": "app.js",
   "scripts": {
-    "dev": "npm run bundle:dev && npm run copy && parallelshell 'harp server public' 'npm run watch'",
+    "dev": "npm run bundle:dev && npm run copy && parallelshell 'harp server public' 'npm run watch' 'npm run browsersync'",
     "prod": "npm run bundle:prod && npm run copy && harp compile",
     "bundle:dev": "npm run clean:js && browserify src/**/*.js -p [ factor-bundle -o '> public/js/`basename $FILE`' ] > public/js/common.js",
     "bundle:prod": "npm run clean:js && browserify src/**/*.js -p [ factor-bundle -o 'uglifyjs -cm > public/js/`basename $FILE`' ] | uglifyjs -cm > public/js/common.js",
+    "browsersync": "browser-sync start --config bs-config.js",
     "clean:js": "mkdir -p public/js && rm -rf public/js/*",
     "clean:other": "bash -O extglob -c 'rm -rf public/!(js)'",
     "copy": "npm run clean:other && bash -O extglob -c 'cp -r src/!(js) public'",
@@ -19,19 +20,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/janruehling/harp-browserify-babel.git"
+    "url": "https://github.com/janruehling/harp-browserify-babel-browsersync.git"
   },
   "author": "Jan Ruehling <janruehling@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/janruehling/harp-browserify-babel/issues"
+    "url": "https://github.com/janruehling/harp-browserify-babel-browsersync/issues"
   },
-  "homepage": "https://github.com/janruehling/harp-browserify-babel",
+  "homepage": "https://github.com/janruehling/harp-browserify-babel-browsersync",
   "dependencies": {},
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.3.0",
+    "browser-sync": "^2.13.0",
     "browserify": "^13.0.1",
     "factor-bundle": "^2.5.0",
     "harp": "^0.20.3",
