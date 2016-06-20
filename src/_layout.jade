@@ -1,0 +1,12 @@
+doctype
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title title
+    link(href="css/common.css", rel='stylesheet')
+    include ./_partials/_stylesheets.jade
+  body
+    != yield
+    script(src="js/common.js")
+    include ./_partials/_javascripts.jade
+  

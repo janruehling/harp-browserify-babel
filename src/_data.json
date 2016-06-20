@@ -1,0 +1,18 @@
+{
+  "index": {
+    "javascripts": [
+      "js/index.js"
+    ],
+    "stylesheets": [
+      "css/index.css"
+    ]
+  },
+  "about": {
+    "javascripts": [
+      "js/about.js"
+    ],
+    "stylesheets": [
+      "css/about.css"
+    ]
+  }
+}
