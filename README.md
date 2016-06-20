@@ -6,7 +6,7 @@ Javascript bundles are split into small per page bundles and one big 'common.js'
 Production code is minified through uglifyjs.
 
 Use it:
-===============
+=======
 
 Either install harp globally ...
 
@@ -25,7 +25,7 @@ Then do ...
 
 ```
 npm install
-npm dev
+npm run dev
 ```
 
 ... to start a watcher that monitors the **/src** directory.
@@ -33,7 +33,7 @@ ONLY edit or add files to the **/src** directory, any changes will be copied to 
 Once you are happy with your site do ...
 
 ```
-npm prod
+npm run prod
 ```
 
 ... and browserify will minify the Javascript files before harp compiles all files and puts them into **/www**
