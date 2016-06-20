@@ -1,12 +1,8 @@
-harp-browserify-babel
-=====================
+# harp-browserify-babel
 
-A harp boilerplate with browserify and es6 (through babelify) support.
-Javascript bundles are split into small per page bundles and one big 'common.js' file using factor-bundle.
-Production code is minified through uglifyjs.
+> A harp boilerplate with browserify and es6 (through babelify) support.
 
-Use it:
-=======
+### Use it:
 
 Either install harp globally ...
 
